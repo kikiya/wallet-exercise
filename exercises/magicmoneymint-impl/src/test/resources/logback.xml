@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender currency="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{ISO8601} %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger currency="org.apache.cassandra" level="ERROR" />
+    <logger currency="com.datastax.driver" level="WARN" />
+
+    <logger currency="akka" level="WARN" />
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
